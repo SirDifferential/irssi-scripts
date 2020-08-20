@@ -1,0 +1,10 @@
+#!/bin/bash
+# Moves the latest image from a folder to another folder,
+# resizes it to 50% size and prints it to stdout
+
+cd /foo/bar/
+pic_filename=`ls -Art ./ | tail -n 1`
+mogrify -resize 50% $pic_filename
+mv $pic_filename /fizz/buzz/
+echo https://example.com/buzz/$pic_filename
+

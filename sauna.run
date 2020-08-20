@@ -1,0 +1,6 @@
+#!/bin/bash
+# Reads the sauna temperature for eficode offices and prints to stdout
+
+TEMPERATURE=`curl -s https://sauna.eficode.fi/get-latest | jq .temperature | xargs printf "%.*f\n" 0`
+echo Eficoden saunan lämpötila: $TEMPERATURE°C
+

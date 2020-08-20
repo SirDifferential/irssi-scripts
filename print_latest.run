@@ -1,0 +1,6 @@
+#!/bin/bash
+# Finds the last file in a folder and prints it as a url
+
+pic_filename=`ls -Art /fizz/buzz/ | tail -n 1`
+echo https://example.com/buzz/$pic_filename
+
